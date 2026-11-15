@@ -31,7 +31,8 @@ static func process_folder(src: String, dst: String, options: Dictionary = {}) -
 	var colors: int = int(options.get("palette_colors", 16))
 	var dither: bool = bool(options.get("dither", true))
 	var athr: float = float(options.get("alpha_threshold", 0.5))
-	var overwrite: bool = bool(options.get("overwrite", false))
+	var overwrite: bool = bool(options.get("overwrite", true))
+	var one_file: String = str(options.get("one_file", ""))
 
 	if color_mode != "rgb555" and color_mode != "palette":
 		report["error"] = "Unknown color_mode '%s' (use \"rgb555\" or \"palette\")." % color_mode
@@ -52,6 +53,8 @@ static func process_folder(src: String, dst: String, options: Dictionary = {}) -
 	_collect(a, "", files)
 	var written := {}
 	for rel: String in files:
+		if not one_file.is_empty() and not one_file == rel:
+			continue
 		var out_rel := rel.get_basename() + ".png"
 		var out_path := b + "/" + out_rel
 		if written.has(out_rel):

@@ -15,6 +15,9 @@ class PsxMenu extends EditorContextMenuPlugin:
 		if paths.size() != 1:
 			return
 		if not DirAccess.dir_exists_absolute(ProjectSettings.globalize_path(paths[0])):
+			add_context_menu_item("PSX Texture Prep: Process File (16-color palette)", _on_palette_file)
+			add_context_menu_item("PSX Texture Prep: Process File (8-color palette)", _on_palette8_file)
+			add_context_menu_item("PSX Texture Prep: Process File (4-color palette)", _on_palette4_file)
 			return
 		#add_context_menu_item("PSX Texture Prep: Process Folder (RGB555)", _on_rgb555)
 		add_context_menu_item("PSX Texture Prep: Process Folder (16-color palette)", _on_palette)
@@ -22,14 +25,26 @@ class PsxMenu extends EditorContextMenuPlugin:
 		add_context_menu_item("PSX Texture Prep: Process Folder (4-color palette)", _on_palette4)
 
 	func _on_rgb555(paths: PackedStringArray) -> void:
-		owner_plugin.run_on_folder(paths[0], {"color_mode": "rgb555"}, "_psx555")
+		owner_plugin.run_on_folder(paths[0], {"color_mode": "rgb555"})
 
 	func _on_palette(paths: PackedStringArray) -> void:
-		owner_plugin.run_on_folder(paths[0], {"color_mode": "palette", "palette_colors": 16, "overwrite": true}, "_psx")
+		owner_plugin.run_on_folder(paths[0], {"color_mode": "palette", "palette_colors": 16})
 	func _on_palette8(paths: PackedStringArray) -> void:
-		owner_plugin.run_on_folder(paths[0], {"color_mode": "palette", "palette_colors": 8, "overwrite": true}, "_psx")
+		owner_plugin.run_on_folder(paths[0], {"color_mode": "palette", "palette_colors": 8})
 	func _on_palette4(paths: PackedStringArray) -> void:
-		owner_plugin.run_on_folder(paths[0], {"color_mode": "palette", "palette_colors": 4, "overwrite": true}, "_psx")
+		owner_plugin.run_on_folder(paths[0], {"color_mode": "palette", "palette_colors": 4})
+	
+	func _on_palette_file(paths: PackedStringArray) -> void:
+		owner_plugin.run_on_folder(paths[0].get_base_dir(), {"color_mode": "palette", "palette_colors": 16, "one_file": paths[0].get_file()})
+	func _on_palette8_file(paths: PackedStringArray) -> void:
+		owner_plugin.run_on_folder(paths[0].get_base_dir(), {"color_mode": "palette", "palette_colors": 8, "one_file": paths[0].get_file()})
+	func _on_palette4_file(paths: PackedStringArray) -> void:
+		owner_plugin.run_on_folder(paths[0].get_base_dir(), {"color_mode": "palette", "palette_colors": 4, "one_file": paths[0].get_file()})
+	
+	func _on_process_file(paths: Array) -> void:
+		for path in paths:
+			print("Processing file: ", path)
+			# Add your custom file logic here
 
 
 func _enter_tree() -> void:
@@ -44,12 +59,12 @@ func _exit_tree() -> void:
 		_menu = null
 
 
-func run_on_folder(path: String, options: Dictionary, suffix: String) -> void:
+func run_on_folder(path: String, options: Dictionary) -> void:
 	var src := path.trim_suffix("/")
 	if src == "res:" or src.is_empty():
 		push_warning("PSX Texture Prep: choose a sub-folder, not the project root.")
 		return
-	var dst := src + suffix
+	var dst := src + "_psx"
 	var report := _Batch.process_folder(src, dst, options)
 	if not report["ok"]:
 		push_warning("PSX Texture Prep: %s" % report["error"])
