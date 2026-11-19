@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Presents Please"
-run/main_scene="res://scenes/node_2d.tscn"
+run/main_scene="uid://c480k8stmbxwk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

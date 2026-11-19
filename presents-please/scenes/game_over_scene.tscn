@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://vknu5kml037r"]
+
+[ext_resource type="Script" uid="uid://de7hnudhblhjb" path="res://scripts/game_over_scene.gd" id="1_64dwf"]
+
+[node name="GameOverScene" type="Control" unique_id=1060528095]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64dwf")
+
+[node name="RestartButton" type="Button" parent="." unique_id=1955402488]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 376.0
+offset_top = 249.0
+offset_right = 776.0
+offset_bottom = 309.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESTART"
+
+[node name="QuitButton" type="Button" parent="." unique_id=619404157]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 339.0
+offset_right = 776.0
+offset_bottom = 399.0
+text = "QUIT"
+
+[node name="DaysLabel" type="Label" parent="." unique_id=1147095475]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 193.0
+offset_right = 526.0
+offset_bottom = 216.0
+text = "DAYS COMPLETED: "
+
+[node name="MistakesLabel" type="Label" parent="." unique_id=869174637]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 193.0
+offset_right = 753.0
+offset_bottom = 216.0
+text = "MISTAKES MADE: "
+
+[node name="MainLabel" type="Label" parent="." unique_id=808269517]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 139.0
+offset_right = 643.0
+offset_bottom = 162.0
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

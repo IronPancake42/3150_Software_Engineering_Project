@@ -1,0 +1,19 @@
+[
+	{
+		"names": [
+			"Teddy Bear",
+			"Pink Teddy Bear",
+			"Freddy Fazbear"
+		],
+		"assets": [
+			"teddy_1",
+			"teddy_2",
+			"teddy_3"
+		],
+		"letter_contents": [
+			"Dear Santa, I want a soft bear this Chistmas",
+			"Pink Teddy Bear please please please please please",
+			"OR OR OR OR OR OR OR"
+		]
+	}
+]

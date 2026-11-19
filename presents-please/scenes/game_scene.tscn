@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://no7c04xu3654"]
+
+[ext_resource type="Script" uid="uid://bm41xo8oofe1f" path="res://scripts/game_scene.gd" id="1_onqr8"]
+[ext_resource type="Texture2D" uid="uid://b5aybuokxvpu2" path="res://assets_psx/black and white rabbit - 480x573.png" id="2_ycayy"]
+
+[node name="GameScene" type="Node2D" unique_id=686131919]
+script = ExtResource("1_onqr8")
+
+[node name="PresentSprite2D" type="Sprite2D" parent="." unique_id=1637432805]
+position = Vector2(562, 258)
+texture = ExtResource("2_ycayy")
+
+[node name="UI" type="Control" parent="." unique_id=371335519]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BurnButton" type="Button" parent="UI" unique_id=1895774131]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 550.0
+offset_right = 700.0
+offset_bottom = 590.0
+text = "BURN"
+
+[node name="ProceedButton" type="Button" parent="UI" unique_id=1009511402]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 550.0
+offset_right = 570.0
+offset_bottom = 590.0
+text = "PROCEED"
+
+[node name="LetterContentLabel" type="Label" parent="UI" unique_id=90985301]
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 0
+offset_left = 880.0
+offset_top = 121.0
+offset_right = 1080.0
+offset_bottom = 465.0
+autowrap_mode = 3
+
+[node name="DayCounterLabel" type="Label" parent="UI" unique_id=889182464]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 549.0
+offset_right = 147.0
+offset_bottom = 597.0
+text = "DAY:"
+
+[node name="MistakeCounterLabel" type="Label" parent="UI" unique_id=1675477463]
+visible = false
+layout_mode = 0
+offset_left = 41.0
+offset_top = 36.0
+offset_right = 141.0
+offset_bottom = 86.0
+text = "MISTAKES:"
+
+[connection signal="pressed" from="UI/BurnButton" to="." method="_on_burn_button_pressed"]
+[connection signal="pressed" from="UI/ProceedButton" to="." method="_on_proceed_button_pressed"]

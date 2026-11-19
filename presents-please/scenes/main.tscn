@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c480k8stmbxwk"]
+
+[ext_resource type="Script" uid="uid://dbsvo8bdbvw4m" path="res://scripts/game_manager.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://du5w7sdrgtsri" path="res://scripts/day_manager.gd" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://py5urwgmrmiw" path="res://scripts/screen_manager.gd" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bh2r2153a15p2" path="res://scenes/main_menu_scene.tscn" id="4_tefeu"]
+[ext_resource type="PackedScene" uid="uid://vknu5kml037r" path="res://scenes/game_over_scene.tscn" id="5_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://no7c04xu3654" path="res://scenes/game_scene.tscn" id="6_tipki"]
+
+[node name="Main" type="Node" unique_id=1518980851]
+script = ExtResource("1_sugp2")
+
+[node name="World" type="Node2D" parent="." unique_id=1280744258]
+
+[node name="DayManager" type="Node" parent="." unique_id=275783428]
+script = ExtResource("2_jyhfs")
+
+[node name="ScreenManager" type="Node" parent="." unique_id=532291751]
+script = ExtResource("3_tbgi4")
+main_menu_scene = ExtResource("4_tefeu")
+game_over_scene = ExtResource("5_o6xl0")
+game_scene = ExtResource("6_tipki")
+
+[node name="Screen" type="Control" parent="ScreenManager" unique_id=105927771]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
