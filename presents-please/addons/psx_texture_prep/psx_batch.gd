@@ -31,7 +31,7 @@ static func process_folder(src: String, dst: String, options: Dictionary = {}) -
 	var colors: int = int(options.get("palette_colors", 16))
 	var dither: bool = bool(options.get("dither", true))
 	var athr: float = float(options.get("alpha_threshold", 0.5))
-	var overwrite: bool = bool(options.get("overwrite", true))
+	var overwrite: bool = bool(options.get("overwrite", false))
 	var one_file: String = str(options.get("one_file", ""))
 
 	if color_mode != "rgb555" and color_mode != "palette":
