@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e5gs1ws6nek6"
-path="res://.godot/imported/teddy_3.png-5d8c9244cff81de19a28f33d469a04fb.ctex"
+uid="uid://4hkofui4mmwp"
+path="res://.godot/imported/pills.png-8d2bbf98ad8e21cf1a898ae9143db80f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_psx/teddy_3.png"
-dest_files=["res://.godot/imported/teddy_3.png-5d8c9244cff81de19a28f33d469a04fb.ctex"]
+source_file="res://assets/pills.png"
+dest_files=["res://.godot/imported/pills.png-8d2bbf98ad8e21cf1a898ae9143db80f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bol22ci01c8a1"
-path="res://.godot/imported/wooden-toy-train-3d-2eadefbf.png-855b4f7961dba8c4a87b536ea98df71c.ctex"
+path="res://.godot/imported/wooden-toy-train-3d-2eadefbf.png-665b5d93baac43bc344dc3161476b5e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_psx/ASEETT/wooden-toy-train-3d-2eadefbf.png"
-dest_files=["res://.godot/imported/wooden-toy-train-3d-2eadefbf.png-855b4f7961dba8c4a87b536ea98df71c.ctex"]
+source_file="res://assets_psx/wooden-toy-train-3d-2eadefbf.png"
+dest_files=["res://.godot/imported/wooden-toy-train-3d-2eadefbf.png-665b5d93baac43bc344dc3161476b5e3.ctex"]
 
 [params]
 

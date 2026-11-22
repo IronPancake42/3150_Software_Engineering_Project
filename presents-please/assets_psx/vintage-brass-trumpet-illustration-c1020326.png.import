@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cne7uasbcjq3e"
-path="res://.godot/imported/vintage-brass-trumpet-illustration-c1020326.png-8628f55b05b9dfcf9f494b0839bf078d.ctex"
+path="res://.godot/imported/vintage-brass-trumpet-illustration-c1020326.png-057f15aabe815e9a5705dd48529276e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_psx/ASEETT/vintage-brass-trumpet-illustration-c1020326.png"
-dest_files=["res://.godot/imported/vintage-brass-trumpet-illustration-c1020326.png-8628f55b05b9dfcf9f494b0839bf078d.ctex"]
+source_file="res://assets_psx/vintage-brass-trumpet-illustration-c1020326.png"
+dest_files=["res://.godot/imported/vintage-brass-trumpet-illustration-c1020326.png-057f15aabe815e9a5705dd48529276e6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c01v7n73wbhr0"
-path="res://.godot/imported/teddy_3.png-3cb21629f801f1ca3ffcefec481c87e3.ctex"
+uid="uid://dtw5kuu5o5quv"
+path="res://.godot/imported/Headphones- 800x800.png-e19da6f6c09024fd6282c1d859defb9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/teddy_3.png"
-dest_files=["res://.godot/imported/teddy_3.png-3cb21629f801f1ca3ffcefec481c87e3.ctex"]
+source_file="res://assets_psx/Headphones- 800x800.png"
+dest_files=["res://.godot/imported/Headphones- 800x800.png-e19da6f6c09024fd6282c1d859defb9d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l5y0leri278f"
-path="res://.godot/imported/teddy_1.png-083b5241969eb8443500237649f874d5.ctex"
+uid="uid://c58o4e0qfauqd"
+path="res://.godot/imported/voodoo.png-a6fd163a16386752c855c1e8c9dc8271.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/teddy_1.png"
-dest_files=["res://.godot/imported/teddy_1.png-083b5241969eb8443500237649f874d5.ctex"]
+source_file="res://assets/voodoo.png"
+dest_files=["res://.godot/imported/voodoo.png-a6fd163a16386752c855c1e8c9dc8271.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1sksa83uq3h1"
-path="res://.godot/imported/vintage-brown-leather-baseball-glove-02b12823.png-cecfbc92117bf571d653ceca8527c8d0.ctex"
+path="res://.godot/imported/vintage-brown-leather-baseball-glove-02b12823.png-d128d733da8b2974d5a509db242a4d44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_psx/ASEETT/vintage-brown-leather-baseball-glove-02b12823.png"
-dest_files=["res://.godot/imported/vintage-brown-leather-baseball-glove-02b12823.png-cecfbc92117bf571d653ceca8527c8d0.ctex"]
+source_file="res://assets_psx/vintage-brown-leather-baseball-glove-02b12823.png"
+dest_files=["res://.godot/imported/vintage-brown-leather-baseball-glove-02b12823.png-d128d733da8b2974d5a509db242a4d44.ctex"]
 
 [params]
 
