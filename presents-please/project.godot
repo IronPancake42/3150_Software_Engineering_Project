@@ -23,7 +23,7 @@ mouse_cursor/custom_image="uid://c7he836phd8tf"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/psx_texture_prep/plugin.cfg")
+enabled=PackedStringArray("res://addons/gut/plugin.cfg", "res://addons/psx_texture_prep/plugin.cfg", "res://addons/terminal/plugin.cfg")
 
 [physics]
 
