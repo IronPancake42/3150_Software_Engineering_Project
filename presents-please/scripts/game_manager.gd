@@ -36,6 +36,7 @@ func decide(defect: bool) -> void:
 		mistakes += 1
 		if mistakes == 3:
 			end_game(false)
+			return
 	day_manager.next_present()
 
 func end_game(win: bool) -> void:

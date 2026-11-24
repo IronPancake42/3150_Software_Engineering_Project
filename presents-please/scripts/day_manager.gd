@@ -27,7 +27,7 @@ func start_day() -> void:
 func next_present() -> void:
 	current_present += 1
 	
-	if current_present >= total_presents:
+	if current_present > total_presents:
 		end_day()
 	else:
 		current_pair = present_generator.generate_pair()
@@ -36,5 +36,6 @@ func next_present() -> void:
 func end_day() -> void:
 	if current_day == 7:
 		last_day_ended.emit(true)
+		return
 	current_present = 0
 	start_day()
