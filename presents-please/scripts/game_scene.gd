@@ -20,7 +20,8 @@ func set_day(day: int) -> void:
 func present_changed(present_pair: PresentPair) -> void:
 	letter_content_label.text = present_pair.letter.letter_content
 	var path = "res://assets_psx/" + present_pair.present.asset + ".png"
-	present_sprite_2d.texture = load(path)
+	if ResourceLoader.exists(path):
+		present_sprite_2d.texture = load(path)
 
 func _on_burn_button_pressed() -> void:
 	decision_request.emit(true)
